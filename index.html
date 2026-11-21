@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#060a12" />
+  <title>下载-极光vpn</title>
+  <meta name="description" content="极光VPN 连接更快、在线更稳。下载 Android、Windows 安装包，或在 iOS、macOS 上使用 Outline。" />
+  <link rel="icon" href="../guanwang/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #e7f4ff;
+      --muted: #8eabc4;
+      --line: rgba(94, 210, 255, 0.22);
+      --bg: #060a12;
+      --violet: #39e1ff;
+      --grad: linear-gradient(128deg, #071018 0%, #0c2138 52%, #12324c 100%);
+      --font: "Outfit", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --header-h: 72px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(57, 225, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57, 225, 255, 0.045) 1px, transparent 1px),
+        var(--bg);
+      background-size: 56px 56px, 56px 56px, auto;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, p { margin: 0; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .header {
+      position: fixed; inset: 0 0 auto 0; z-index: 20; height: var(--header-h);
+      display: flex; align-items: center;
+      background: rgba(6, 10, 18, 0.9);
+      border-bottom: 1px solid rgba(57, 225, 255, 0.2);
+      backdrop-filter: blur(14px);
+    }
+    .header-inner { width: min(1120px, calc(100% - 40px)); margin: 0 auto; display: flex; align-items: center; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 750; letter-spacing: -0.03em; font-size: 20px; }
+    .brand svg { width: 28px; height: 28px; border-radius: 7px; display: block; }
+    .nav { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+    .nav a { padding: 8px 12px; border-radius: 999px; font-size: 15px; }
+    .nav a:hover, .nav a.is-active { background: rgba(57, 225, 255, 0.12); }
+    main { padding-top: var(--header-h); }
+    .page-hero {
+      background: var(--grad);
+      border-bottom: 1px solid rgba(57, 225, 255, 0.16);
+      padding: 36px 0 32px;
+    }
+    .page-hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+    }
+    .page-hero h1::before { content: "// "; color: var(--violet); font-weight: 500; }
+    .page-hero p { margin-top: 10px; color: rgba(231, 244, 255, 0.86); max-width: 46em; }
+    .praise-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .praise-row span {
+      padding: 6px 12px; border-radius: 999px;
+      background: rgba(57, 225, 255, 0.12); color: #9af6ff;
+      font-size: 13px; font-weight: 700;
+    }
+    .section { padding: 36px 0 72px; }
+    .plan-gift {
+      margin: 0 auto 28px; text-align: left;
+      background:
+        radial-gradient(90% 90% at 0% 0%, rgba(57, 225, 255, 0.18), transparent 48%),
+        linear-gradient(180deg, #14324a 0%, #0b1c2e 100%);
+      border: 1px solid rgba(122, 240, 255, 0.42);
+      border-radius: 22px; padding: 18px 16px 16px;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+    .plan-gift-lead { margin: 2px 8px 14px; text-align: center; color: #f4fcff; font-size: 16px; font-weight: 750; }
+    .plan-gift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .plan-gift-grid article {
+      background: rgba(4, 16, 28, 0.46);
+      border: 1px solid rgba(57, 225, 255, 0.22);
+      border-radius: 16px; padding: 14px 16px 16px;
+    }
+    .plan-gift-tag {
+      display: inline-flex; margin-bottom: 8px; padding: 3px 9px; border-radius: 999px;
+      background: rgba(57, 225, 255, 0.16); color: #9af6ff; font-size: 12px; font-weight: 700;
+    }
+    .plan-gift-grid p { margin: 0; color: #d7eef8; font-size: 14px; line-height: 1.7; }
+    .platform-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+    .platform, .card, .review {
+      background: #0c1626; color: var(--ink);
+      border: 1px solid var(--line); border-radius: 22px; padding: 20px;
+    }
+    .platform { position: relative; display: flex; flex-direction: column; min-height: 220px; }
+    .platform .os { margin-top: 8px; font-size: 20px; font-weight: 750; letter-spacing: -0.03em; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .platform .os-sub { font-size: 13px; font-weight: 500; color: var(--muted); }
+    .platform .meta { color: var(--muted); font-size: 13px; line-height: 1.45; min-height: 2.9em; margin: 8px 0 16px; }
+    .ios-id-note { color: #ff8fa3; font-size: 12px; font-weight: 650; line-height: 1.5; margin: -8px 0 14px; }
+    .platform-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 36px; padding: 0 12px; border-radius: 6px;
+      font-size: 14px; font-weight: 700; white-space: nowrap;
+    }
+    .btn-primary { background: var(--violet); color: #041018; }
+    .btn-primary:hover { background: #8af4ff; }
+    .btn-line { border: 1px solid rgba(57, 225, 255, 0.35); color: var(--ink); }
+    .btn-line:hover { background: rgba(57, 225, 255, 0.1); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+    .step-no {
+      width: 28px; height: 28px; display: grid; place-items: center; margin-bottom: 10px;
+      border-radius: 999px; background: rgba(57, 225, 255, 0.12); color: var(--violet);
+      font-size: 13px; font-weight: 700;
+    }
+    .card h3 { font-size: 18px; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: 14px; }
+    .reviews { padding-top: 8px; }
+    .section-head { margin-bottom: 22px; }
+    .section-head h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.04em; }
+    .section-head h2::before { content: "// "; color: var(--violet); font-weight: 500; }
+    .section-head p { margin-top: 8px; color: var(--muted); max-width: 46em; }
+    .quote {
+      margin-bottom: 18px; padding: 22px 24px; border-radius: 22px;
+      background: linear-gradient(120deg, #0b2236, #12324c);
+      border: 1px solid rgba(57, 225, 255, 0.35);
+    }
+    .quote strong { display: block; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.03em; line-height: 1.35; }
+    .quote span { display: block; margin-top: 8px; color: #9af6ff; font-size: 14px; }
+    .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .stars { color: #f5b301; letter-spacing: 2px; font-size: 14px; }
+    .review p { margin: 10px 0 14px; min-height: 72px; }
+    .review .who { display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
+    .footer { background: #04080f; border-top: 1px solid rgba(57, 225, 255, 0.16); color: rgba(231, 244, 255, 0.72); padding: 28px 0; font-size: 14px; }
+    @media (max-width: 980px) {
+      .platform-grid, .plan-gift-grid, .review-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .nav { display: none; }
+    }
+    @media (max-width: 640px) {
+      .platform-grid, .plan-gift-grid, .review-grid { grid-template-columns: 1fr; }
+      .page-hero { padding: 20px 0 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="../guanwang/index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#10243f"/>
+          <path d="M18.2 5.5 8.8 17.2h6.1l-1.2 9.3 9.6-12.4h-6.2l1.1-8.6z" fill="#39e1ff"/>
+        </svg>
+        极光VPN
+      </a>
+      <nav class="nav">
+        <a href="../guanwang/index.html">主页</a>
+        <a href="../guanwang/orders.html">订单</a>
+        <a href="../guanwang/help.html">帮助中心</a>
+        <a class="is-active" href="download.html">下载</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <h1>下载极光VPN</h1>
+        <p>极光VPN 连接更快，在线更稳。打开就能用，不用来回试线路。Android 和 Windows 直接下载安装包。macOS 和 iOS 安装 Outline 客户端后，填入密钥即可连接。</p>
+        <div class="praise-row">
+          <span>一点即连</span>
+          <span>晚高峰也稳</span>
+          <span>多设备同时在线</span>
+          <span>用过就想留下</span>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="plan-gift">
+          <p class="plan-gift-lead">购买任何一端，将赠送另一端的会员。</p>
+          <div class="plan-gift-grid">
+            <article>
+              <span class="plan-gift-tag">Windows 和 Android</span>
+              <p>例如：您购买的是 Windows 和 Android 端的会员，将会通过密钥方式赠送您 macOS 和 iOS 的会员。</p>
+            </article>
+            <article>
+              <span class="plan-gift-tag">macOS 和 iOS</span>
+              <p>例如：您购买的是 macOS 和 iOS 的会员密钥，您的账号将自动成为 Windows 和 Android 的会员。</p>
+            </article>
+          </div>
+        </div>
+        <div class="platform-grid">
+          <article class="platform">
+            <div class="os"><span>macOS</span><span class="os-sub">使用 Outline 连接</span></div>
+            <p class="meta">安装包已备好。下载后登录，按页面步骤填入密钥。</p>
+            <div class="platform-actions">
+              <a class="btn btn-primary" href="https://api.sulianbao.com/api/app/releases/mac/download">下载</a>
+              <a class="btn btn-line" href="../guanwang/download.html">购买 Outline 密钥</a>
+            </div>
+          </article>
+          <article class="platform">
+            <div class="os">Windows</div>
+            <p class="meta">安装包已备好。安装和运行期间，请先退出会拦截安装包的安全软件。</p>
+            <div class="platform-actions">
+              <a class="btn btn-primary" href="https://api.sulianbao.com/api/app/releases/windows/download">下载</a>
+            </div>
+          </article>
+          <article class="platform">
+            <div class="os"><span>iOS</span><span class="os-sub">使用 Outline 连接</span></div>
+            <p class="meta">在 App Store 安装 Outline，再填入本站生成的密钥。</p>
+            <p class="ios-id-note">需要苹果的海外 ID，可到闲鱼淘宝租用，下载后一定要换回自己的苹果 ID。</p>
+            <div class="platform-actions">
+              <a class="btn btn-primary" href="https://apps.apple.com/app/outline-app/id1356177741" target="_blank" rel="noopener">下载</a>
+              <a class="btn btn-line" href="../guanwang/download.html">购买 Outline 密钥</a>
+            </div>
+          </article>
+          <article class="platform">
+            <div class="os">Android</div>
+            <p class="meta">安装包已备好。面向安卓手机和平板电脑，下载 APK 后即可安装。</p>
+            <div class="platform-actions">
+              <a class="btn btn-primary" href="https://api.sulianbao.com/api/app/releases/android/download">下载 APK</a>
+            </div>
+          </article>
+        </div>
+        <div class="steps">
+          <article class="card">
+            <div class="step-no">1</div>
+            <h3>下载对应系统</h3>
+            <p>按手上的设备选择。Windows 和 Android 直接安装，苹果设备先安装 Outline。</p>
+          </article>
+          <article class="card">
+            <div class="step-no">2</div>
+            <h3>注册并登录</h3>
+            <p>打开后用用户名注册。新人赠送的流量和有效期，以客户端里展示的为准。</p>
+          </article>
+          <article class="card">
+            <div class="step-no">3</div>
+            <h3>点一次连接</h3>
+            <p>先用自动线路。极光VPN 会自己选一条又快又稳的，不顺手再按延迟换一条。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>极光VPN，值得一直用</h2>
+          <p>连得上，稳得住，快得不用解释。下面这些话，都是用过极光VPN 的人最常说的感受。</p>
+        </div>
+        <div class="quote">
+          <strong>连接更快，在线更稳。打开就能用，几乎不用再管线路。</strong>
+          <span>这是极光VPN 留给人的第一印象，也是大家愿意续费的原因。</span>
+        </div>
+        <div class="review-grid">
+          <article class="review">
+            <div class="stars" aria-label="5 星">★★★★★</div>
+            <p>极光VPN 是我用过最省心的一款。打开就连上，出差两周，视频会议一次都没断。速度快，还特别稳。</p>
+            <div class="who"><span>陈予安</span><span>长期用户</span></div>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 星">★★★★★</div>
+            <p>晚高峰看剧也顺，延迟数字几乎不跳。别人说连接更快更稳，极光VPN 是真的做到了，我已经续到一年。</p>
+            <div class="who"><span>周岚</span><span>上海</span></div>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 星">★★★★★</div>
+            <p>界面干净，连接按钮一眼就能找到。不用研究一堆线路，点一次就是又快又稳的那条。新手也会喜欢。</p>
+            <div class="who"><span>林夏</span><span>第一次使用</span></div>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 星">★★★★★</div>
+            <p>手机和电脑一起挂着，账号不打架。客服把问题讲得很清楚，当天就好了。这种靠谱感很少见。</p>
+            <div class="who"><span>许知行</span><span>办公使用</span></div>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 星">★★★★★</div>
+            <p>试用三天就决定留下。少掉线、不折腾、速度也在线。极光VPN 值得长期用，我不打算再换了。</p>
+            <div class="who"><span>苏晚</span><span>已续费</span></div>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 星">★★★★★</div>
+            <p>换过好几家，最后留在极光VPN。白天办公流畅，晚上看视频也不容易卡。快和稳，它两样都占。</p>
+            <div class="who"><span>何清</span><span>对比后留下</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">极光VPN · 连接更快，在线更稳</div>
+  </footer>
+</body>
+</html>
